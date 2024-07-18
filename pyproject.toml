@@ -4,10 +4,29 @@ build-backend = "hatchling.build"
 
 [project]
 name = "example-package-lespana"
-version = "0.1.0"
+dynamic = ["version"]
 dependencies = [
   "numpy"
+]
+authors = [
+  { name="Example Author", email="author@example.com" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Private :: Do Not Upload",
 ]
 
 [project.optional-dependencies]
 test = ["pytest"]
+
+[project.urls]
+"Homepage" = "https://l-espana.github.io/example-package-lespana"
+"Source Code" = "https://github.com/l-espanaexample-package-lespana"
+
+[tool.hatch]
+version.path = "src/example_package_lespana/__init__.py"
